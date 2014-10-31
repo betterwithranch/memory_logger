@@ -1,6 +1,6 @@
-require "stub_logger/version"
+require "memory_logger/version"
 
-module StubLogger
+module MemoryLogger
   class Logger
 
     attr_accessor :logger

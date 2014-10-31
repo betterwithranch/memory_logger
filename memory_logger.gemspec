@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'stub_logger/version'
+require 'memory_logger/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "stub_logger"
-  spec.version       = StubLogger::VERSION
+  spec.name          = "memory_logger"
+  spec.version       = MemoryLogger::VERSION
   spec.authors       = ["Craig Israel"]
-  spec.email         = ["craig_israel@onlifehealth.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.email         = ["craig@theisraels.net"]
+  spec.summary       = %q{ A simple in-memory implementation of a Ruby logger.}
+  spec.description   = %q{ Useful in test scenarios to inspect log output. }
+  spec.homepage      = "https://github.com/craigisrael/memory_logger"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
