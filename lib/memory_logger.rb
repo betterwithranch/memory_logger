@@ -1,4 +1,6 @@
 require "memory_logger/version"
+require "logger"
+require "stringio"
 
 module MemoryLogger
   class Logger
@@ -11,7 +13,7 @@ module MemoryLogger
 
     def initialize
       @io = StringIO.new
-      @logger = Logger.new(@io)
+      @logger = ::Logger.new(@io)
     end
 
     def logged_output
