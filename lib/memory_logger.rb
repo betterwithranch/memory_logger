@@ -7,8 +7,10 @@ module MemoryLogger
 
     attr_accessor :logger
 
-    def method_missing(sym, *args, &block)
-      logger.send(sym, *args, &block)
+    %w{ debug info warn error fatal }.each do |level|
+      define_method(level) do |*args|
+        logger.send(level, args)
+      end
     end
 
     def initialize
