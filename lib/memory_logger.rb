@@ -5,7 +5,7 @@ require "stringio"
 module MemoryLogger
   class Logger
 
-    attr_accessor :logger
+    attr_accessor :logger, :formatter
 
     %w{ debug info warn error fatal }.each do |level|
       define_method(level) do |*args|
